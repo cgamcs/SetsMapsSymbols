@@ -114,4 +114,4 @@ Ejemplo de iterador con generadores:
 
 ## Entries, Values y Keys Iterator
 
-Entries te retorna llave y valor, Values te retrona unicamente el valor y keys solo te retorna la llave en caso de iterar un set la llave sera el valor asignado. Alog muy importante es que los arreglos, set o maps tienen un iterador por default y es una maner muy simple de iterar entre cada uno.
+Entries te retorna llave y valor, Values te retrona unicamente el valor y keys solo te retorna la llave en caso de iterar un set la llave sera el valor asignado. Alog muy importante es que los arreglos, set o maps tienen un iterador por default y es una maner muy simple de iterar entre cada uno (ejemplos: 08-app.js).
