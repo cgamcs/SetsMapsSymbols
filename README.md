@@ -97,3 +97,17 @@ Detras de cada iterador hay un código similar a este, se dice que es similar po
         }
     }
 ```
+
+## Generadores
+
+Para inicializar un generador es igual que una fuincion pero al darle el nombre se inicia con un *, ejemplo: `function *generadorCarrito()` los generadores tiene una palabra reservada para mostrar o extraer los valores conocida como **yield**. A diferencia de los iteradores que teniamos que retornar una funcion dentro del iterador para mostrar los datos los generadores tiene .next() para mostrar el contenido (ejemplo: linea 11 / 07-app.js).
+
+Ejemplo de iterador con generadores:
+
+``` JAVASCRIPT
+    function *generadorCarrito( carrito ) {
+        for(let i = 0; i < carrito.length; i++) {
+            yield carrito[i];
+        }
+    }
+```
