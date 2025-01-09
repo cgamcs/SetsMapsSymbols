@@ -78,7 +78,7 @@ Para saber cuando llegamos al final del arreglo, ya que pueden ser dinamicos, un
 
 Para obtener el valor actual debemos decirle que si no hemos llegado al fin (si no estamos en la posicion numero 3) entonces obten el valor actual con `i++` ¿por qué i++? Es porque ya estamos en la posicion 0 por lo tanto eso nos va a permitir acceder al primer elemento y en la sigueinte obtendriamos la siguiente posición, en caso contrario de que ya estemos en el fin, marcar undefined. Entonces la sintaxis completa seria la siguiente: `const valor = !fin ? carrito[i++] : undefined`.
 
-Detras de cada iterador hay un codigo similar a este, se dice similar porque en reralidad son mas complejos porque muchas mas comprobaciones que hacer.
+Detras de cada iterador hay un código similar a este, se dice que es similar porque en reralidad son más complejos con muchas más comprobaciones que hacer.
 
 ``` JAVASCRIPT
     function crearIterador(carrito) {
