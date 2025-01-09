@@ -50,9 +50,22 @@ Podemos agregar elementos desde los parentesis al iniciar el map y utilizar .set
 
 ## ¿Qué son los WeakMaps?
 
-Los weakmaps son muy poco utilizados, normalmente se ven en las librerias pero hablando de forma interna. Para algo que sirven muy bien es para mantener una serie de datos como privados, pero tampoco se debe cuardar la contraseña de un usuario por ejemplo.
+Los weakmaps son muy poco utilizados, normalmente se ven en las librerias pero hablando de forma interna. Para algo que sirven muy bien es para mantener una serie de datos como privados, pero tampoco se debe cuardar la contraseña de un usuario por ejemplo. A diferencia de set y map al inicializar un Symbol no utilizamos **new**.
 
 - Solo acepta objetos
 - No permite **.size**
 - No se puede iterar
 - No puedes conocer la extensión de un weakmap, por eso es bueno manteniendo una serie de datos como privados (ejemplo: 04-app.js).
+
+## Symbols y sus caracteristicas
+
+Una de las caracteristicas principales de los symbols es que nunca son son iguales (ejemplo: linea 1-9 / 05-app.js) incluso teniendo los mismos valores.
+
+- Para agregar elementos a un simbol se deben de usar corchetes (ejemplo: linea 17 / 05-app.js).
+- Igual que al agregar elementos, si queremos saber el contenido de un objeto debemos llamarlo con corchetes (ejemplo: linea 24 / 05-app.js).
+- No se pueden iterar
+- Se pueden agregar descripciones a cada symbol (ejemplo: linea 27 / 05-app.js).
+
+### Ejemplos de usos
+
+En realidad los symbols no se utilizan mucho pero si tienes valores que a la hora de iterar quieres que no se muestren puedes guardar esas propiedades como symbol
