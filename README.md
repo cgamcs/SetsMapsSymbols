@@ -18,3 +18,19 @@ Una caracteristica muy importante de los sets es que son iterables (ejemplo: lin
 ### Ejemplo del uso de un set
 
 Eliminar duplicados en un arreglo como este `const numeros = [10, 20, 30, 40, 50, 10, 20]` normalmente se haria un forEach y se revisaria si existe o no el duplicado y se eliminaria. Con un set solo se ocupa la siguiente sintaxis `const noDoplicados = new Set(numeros)` y asi hacemos un console log nos retorna el arreglo sin los elementos duplicados.
+
+## ¿Qué es un WeakSet y en que se diferencia un Set?
+
+Los sets debiles segun su traduccion son "debiles" y a diferencia de los sets estos no soportan todo tipo de valores como numeros, booleanos, etc. En el weakset solo le puedes agregar o pasar **objetos**, otra diferencia de los weakset es que no existe el metodo .size, y además no es iterable.
+
+``` JAVASCRIPT
+    // Unica forma valida
+    const weakset = new WeakSet()
+
+    const cliente = {
+        nombre: 'Cesar',
+        apellido: 'Garcia'
+    }
+
+    weakset.add(cliente)
+```
