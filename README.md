@@ -1,4 +1,4 @@
-# Sets Maps y Symbols
+# Sets, Maps y Symbols
 
 ## Sets y sus caracteristicas
 
@@ -12,7 +12,7 @@ Otro dato importante es que algunos metodos que existen en arreglos se pueden ut
 - Si queremos eliminar un elemento del carrito utilizamos **.delete()**, si agregamos un consolo log al setMethod nos retorna un true/false si lo elimino nos regresa true pero si no existe el elemento nos muestra false (ejemplo: linea 12 y 14 / 01-app.js).
 - Para eliminar todos los elementos del set puedes poner **.claer()** (ejemplo: linea 16 / 01-app.js).
 
-Una caracteristica muy importante de los sets es que son iterables (ejemplo: linea 18 / 01-app.js). Tambien hay que recordad que si iteramos un arreglo podemos agregar al inicio la varible temporal y el index, pero los sets solo almacenan valores por lo tanto la llave o el index te va a regresar exactamente lo mismo (ejemplo: linea 20 / 01-app.js). En los sets tambien podemos pasarle un tercer parametro que seria al set que pertenece (ejemplo: linea 21 / 01-app.js).
+Una caracteristica muy importante de los sets es que son iterables (ejemplo: linea 18 / 01-app.js). También hay que recordad que si iteramos un arreglo podemos agregar al inicio la varible temporal y el index, pero los sets solo almacenan valores por lo tanto la llave o el index te va a regresar exactamente lo mismo (ejemplo: linea 20 / 01-app.js). En los sets también podemos pasarle un tercer parametro que seria al set que pertenece (ejemplo: linea 21 / 01-app.js).
 
 
 ### Ejemplo del uso de un set
@@ -34,3 +34,25 @@ Los sets debiles segun su traduccion son "debiles" y a diferencia de los sets es
 
     weakset.add(cliente)
 ```
+
+## ¿Qué son los maps?
+
+Los maps son listas ordenadas en llave y valor, piensa en ellos como un objeto pero no un objeto con una sola propiedad, es decir, una llave y un valor, y la llave y el valor puede sar cualquier tipo de datos puede ser un arreglo, un numero, etc. A diferencia de un objeto que puede ser solo 'nombre', 'balanca', etc. Mientras que en un map puede ser cualquier tipo de dato.
+
+En cuanto a performance, los maps son mejores que un objeto son especialmente diseñados para agregar o quitar un elemento o también para recorrerlos, también cuando son mucho más grandes tienen mejor performance que un objeto.
+
+- A diferencia de los sets para agregar un nuevo elemento a un map en este se utiliza **.set()** (ejemplo: linea 3 / 03-app.js).
+- Se pueden usar los mismos metodos que en los sets.
+- Para traer un valor desde el map podemos utilzar **.get()** (ejemplo: linea 13 / 03-app.js) de esa forma podemos traer los valores que existen en un map.
+- En los maps también se puede iterar, al ser de llave y valor al escribir `(valor, index)` te retronaria el valor y la llave que hayas agregado.
+
+Podemos agregar elementos desde los parentesis al iniciar el map y utilizar .set() para agregar elementos despues de iniciar el map como en las lineas 19 y 21 del archivo 03-app.js, además si escribirmos .set() de un elemento que ya existe lo que hace es reescribirlo.
+
+## ¿Qué son los WeakMaps?
+
+Los weakmaps son muy poco utilizados, normalmente se ven en las librerias pero hablando de forma interna. Para algo que sirven muy bien es para mantener una serie de datos como privados, pero tampoco se debe cuardar la contraseña de un usuario por ejemplo.
+
+- Solo acepta objetos
+- No permite **.size**
+- No se puede iterar
+- No puedes conocer la extensión de un weakmap, por eso es bueno manteniendo una serie de datos como privados (ejemplo: 04-app.js).
