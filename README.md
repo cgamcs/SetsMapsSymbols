@@ -68,4 +68,32 @@ Una de las caracteristicas principales de los symbols es que nunca son son igual
 
 ### Ejemplos de usos
 
-En realidad los symbols no se utilizan mucho pero si tienes valores que a la hora de iterar quieres que no se muestren puedes guardar esas propiedades como symbol
+En realidad los symbols no se utilizan mucho pero si tienes valores que a la hora de iterar quieres que no se muestren puedes guardar esas propiedades como symbol.
+
+## Iteradores
+
+Cuando estas iterando hay dos cosas que tienes que tener en cuenta uno es el valor actual, es decir, si estoy iterando sobre la posicion 0 tengo que conocer ese valor, si estoy iterando sobre la posicion 1 tengo que conocer ese valor, lo segundo que es importante es conocer cuantos elementos vamos a iterar porque supongamos que tenemos 3 elementos pero no queremos iterar más alla de los elementos que tenemos en un arreglo.
+
+Para saber cuando llegamos al final del arreglo, ya que pueden ser dinamicos, un arreglo en un momento puede tener 0 o despues puede tener 20. ¿Cómo sabemos que llegamos al final? Tenemos que escribir la siguiente sintaxis: `const fin = ( i >= carrito.length )`. Esto quiere decir que si nuestro arreglo tiene 3 elementos y el valor de `i` es igual a 3 llegamos al final.
+
+Para obtener el valor actual debemos decirle que si no hemos llegado al fin (si no estamos en la posicion numero 3) entonces obten el valor actual con `i++` ¿por qué i++? Es porque ya estamos en la posicion 0 por lo tanto eso nos va a permitir acceder al primer elemento y en la sigueinte obtendriamos la siguiente posición, en caso contrario de que ya estemos en el fin, marcar undefined. Entonces la sintaxis completa seria la siguiente: `const valor = !fin ? carrito[i++] : undefined`.
+
+Detras de cada iterador hay un codigo similar a este, se dice similar porque en reralidad son mas complejos porque muchas mas comprobaciones que hacer.
+
+``` JAVASCRIPT
+    function crearIterador(carrito) {
+        let i = 0
+
+        return {
+            siguiente: () => {
+                const fin = ( i >= carrito.length )
+                const valor = !fin ? carrito[i++] : undefined
+
+                return {
+                    fin,
+                    valor
+                }
+            }
+        }
+    }
+```
